@@ -1,0 +1,8 @@
+.greetings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.greetings .start-here:hover {
+  color: blue;
+}

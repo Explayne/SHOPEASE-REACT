@@ -1,0 +1,23 @@
+.main-content {
+  display: grid;
+  border-color: blue;
+  border: 2px solid red;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px 200px;
+}
+
+.hero {
+  border: 3px solid blue;
+}
+
+.products {
+  border: 3px solid green;
+}
+
+.contact {
+  border: 3px solid orange;
+}
+
+.about {
+  border: 3px solid purple;
+}

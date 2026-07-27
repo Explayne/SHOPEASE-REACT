@@ -1,0 +1,74 @@
+/* ======================================================
+   PRODUCT GRID LAYOUT
+   ====================================================== */
+
+/*
+ * Products is responsible for displaying a collection of
+ * ProductCard components.
+ *
+ * CSS Grid is used because we're arranging multiple cards
+ * across both rows and columns, making this a two-dimensional
+ * layout.
+ *
+ * Layout Goal:
+ *
+ * +--------+--------+--------+
+ * | Card 1 | Card 2 | Card 3 |
+ * +--------+--------+--------+
+ * | Card 4 | Card 5 | Card 6 |
+ * +--------+--------+--------+
+ *
+ * The browser automatically creates as many columns as
+ * available space allows, keeping the layout responsive
+ * without manually writing media queries.
+ */
+
+.products-grid {
+  display: grid;
+
+  /* Each card should never become smaller than 300px.
+     If additional space exists, every visible column
+     shares it equally using fractional units (1fr). */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  /* Maintain consistent spacing between every ProductCard.
+     Using gap keeps spacing controlled by the parent grid
+     instead of adding margins to each child component. */
+  gap: 1.5rem;
+}
+
+/* ======================================================
+   PRODUCT CARD LAYOUT
+   ====================================================== */
+
+/*
+ * Each ProductCard becomes its own Flexbox container.
+ *
+ * Grid decides WHERE each card is placed.
+ * Flexbox decides HOW the contents inside each card
+ * are arranged.
+ *
+ * This separation of responsibilities keeps layout
+ * decisions predictable and easy to maintain.
+ */
+
+.card {
+  /* Temporary border used to visualize the card's
+     boundaries while building the layout. */
+  border: 2px solid green;
+
+  /* Give every card a consistent minimum height so
+     the grid remains visually balanced even when
+     products contain different amounts of content. */
+  min-height: 200px;
+
+  display: flex;
+
+  /* Center content vertically inside the card. */
+  align-items: center;
+
+  /* Center content horizontally inside the card.
+     (We'll change this later as we build a real
+     product card layout.) */
+  justify-content: center;
+}

@@ -1,0 +1,68 @@
+/* ======================================================
+   NAVIGATION LAYOUT
+   ====================================================== */
+
+/*
+ * The navigation bar is a one-dimensional layout:
+ * items only need to be arranged horizontally.
+ *
+ * Flexbox is the right choice because it excels at
+ * distributing items along a single axis while keeping
+ * the layout simple and responsive.
+ */
+
+.navbar {
+  display: flex;
+
+  /* Push the logo to the left and the navigation menu
+     to the right, creating two clearly separated groups. */
+  justify-content: space-between;
+}
+
+/* ======================================================
+   BRANDING
+   ====================================================== */
+
+/*
+ * The logo establishes the store's visual identity.
+ * Styling remains intentionally simple for now because
+ * we'll revisit branding once the overall UI is complete.
+ */
+
+.logo {
+  color: darkblue;
+}
+
+/* ======================================================
+   NAVIGATION LINKS
+   ====================================================== */
+
+/*
+ * The navigation menu is also a one-dimensional layout.
+ * Flexbox keeps every navigation item on a single row,
+ * while gap controls spacing without adding unnecessary
+ * margins to individual list items.
+ */
+
+.nav-links {
+  display: flex;
+
+  /* Create consistent spacing between navigation links.
+     Using gap keeps spacing controlled by the parent
+     container instead of each individual child. */
+  gap: 20px;
+}
+
+/* ======================================================
+   USER FEEDBACK
+   ====================================================== */
+
+/*
+ * Provide immediate visual feedback when users hover
+ * over a navigation link, making the interface feel
+ * interactive and easier to explore.
+ */
+
+.nav-links a:hover {
+  color: blue;
+}
