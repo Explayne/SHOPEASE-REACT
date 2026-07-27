@@ -12,6 +12,7 @@ interface CartProps {
   cartItems: CartItem[];
   onRemoveItem: (id: number) => void;
   onToggleSelected: (id: number) => void;
+  onDeleteSelected: () => void;
 }
 
 // The Cart component exists to display the items App owns.It does
@@ -20,6 +21,7 @@ export default function Cart({
   cartItems,
   onRemoveItem,
   onToggleSelected,
+  onDeleteSelected,
 }: CartProps) {
   return (
     <section className="cart">
@@ -47,6 +49,7 @@ export default function Cart({
               </div>
             </article>
           ))}
+          <button onClick={onDeleteSelected}>Delete Selected</button>
         </div>
       )}
     </section>

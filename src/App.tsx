@@ -75,6 +75,12 @@ export default function App() {
       ),
     );
   }
+
+  function deleteSelected() {
+    setCartItems((currentItems) =>
+      currentItems.filter((item) => !item.selected),
+    );
+  }
   return (
     <>
       {/* Navigation is placed first so it remains the user's
@@ -89,6 +95,7 @@ export default function App() {
         cartItems={cartItems}
         onRemoveItem={removeFromCart}
         onToggleSelected={toggleSelected}
+        onDeleteSelected={deleteSelected}
       />
       {/* cart component*/}
       {/* Footer provides closing information and secondary
